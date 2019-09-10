@@ -1,0 +1,47 @@
+main: clean Driver.o Expr_Command.o Binary_Op_Command.o Num_Command.o Mul_Command.o Div_Command.o Add_Command.o Sub_Command.o Mod_Command.o Expr_Command_Factory.o Stack_Expr_Command_Factory.o Unary_Op_Command.o Lp_Command.o Array_Iterator.o
+	g++ Driver.o Expr_Command.o Binary_Op_Command.o Num_Command.o Mul_Command.o Div_Command.o Add_Command.o Sub_Command.o Mod_Command.o Expr_Command_Factory.o Stack_Expr_Command_Factory.o Unary_Op_Command.o Lp_Command.o Array_Ierator.o -o a.out
+
+Driver.o: Driver.cpp
+	g++ -c Driver.cpp -o Driver.o
+
+Expr_Command.o: Expr_Command.cpp
+	g++ -c Expr_Command.cpp -o Expr_Command.o
+
+Binary_Op_Command.o: Binary_Op_Command.cpp
+	g++ -c Binary_Op_Command.cpp -o Binary_Op_Command.o
+
+Unary_Op_Command.o: Unary_Op_Command.cpp
+	g++ -c Unary_Op_Command.cpp -o Unary_Op_Command.o
+
+Num_Command.o: Num_Command.cpp
+	g++ -c Num_Command.cpp -o Num_Command.o
+
+Mul_Command.o: Mul_Command.cpp
+	g++ -c Mul_Command.cpp -o Mul_Command.o
+
+Div_Command.o: Div_Command.cpp
+	g++ -c Div_Command.cpp -o Div_Command.o
+
+Add_Command.o: Add_Command.cpp
+	g++ -c Add_Command.cpp -o Add_Command.o
+
+Sub_Command.o: Sub_Command.cpp
+	g++ -c Sub_Command.cpp -o Sub_Command.o
+
+Mod_Command.o: Mod_Command.cpp
+	g++ -c Mod_Command.cpp -o Mod_Command.o
+
+Lp_Command.o: Lp_Command.cpp
+	g++ -c Lp_Command.cpp -o Lp_Command.o
+
+Expr_Command_Factory.o: Expr_Command_Factory.cpp
+	g++ -c Expr_Command_Factory.cpp -o Expr_Command_Factory.o
+
+Stack_Expr_Command_Factory.o: Stack_Expr_Command_Factory.cpp
+	g++ -c Stack_Expr_Command_Factory.cpp -o Stack_Expr_Command_Factory.o
+
+Array_Iterator.o: Array_Iterator.cpp
+	g++ -c Array_Iterator.cpp -o Array_Iterator.o
+
+clean:
+	rm -f Driver.o Expr_Command.o Binary_Op_Command.o Num_Command.o Mul_Command.o Div_Command.o Add_Command.o Sub_Command.o Mod_Command.o Expr_Command_Factory.o Stack_Expr_Command_Factory.o Unary_Op_Command.o Lp_Command.o Array_Iterator.o
